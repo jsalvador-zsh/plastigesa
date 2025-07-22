@@ -130,7 +130,7 @@ export interface BlockSectionHeader {
   heading: string
   subheading: string
   badge: string
-  anchorLink: string | null
+  anchorLink: Link | null
 }
 
 export interface BlockContentWithVideo {

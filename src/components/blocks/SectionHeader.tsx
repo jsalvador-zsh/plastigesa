@@ -6,7 +6,7 @@ interface Props extends BlockSectionHeader { }
 export default function SectionHeader(props: BlockSectionHeader) {
   const { id, heading, subheading, badge, anchorLink } = props
   return (
-    <section key={id} className="py-12 text-center space-y-4" data-aos="fade-down" data-aos-duration="1500">
+    <section id={anchorLink?.href ?? ''} key={id} className="py-12 text-center space-y-4" data-aos="fade-down" data-aos-duration="1500">
       <div className="container mx-auto p-4 max-w-6xl">
         {badge && (
           <span className="text-sm uppercase tracking-widest text-green-600 font-bold">
