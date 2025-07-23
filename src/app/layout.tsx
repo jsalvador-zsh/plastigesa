@@ -26,6 +26,7 @@ export default async function RootLayout({
       <head>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+        <meta httpEquiv="Permissions-Policy" content="fullscreen=(self)" />
       </head>
       <body>
         <AOSInitializer />
