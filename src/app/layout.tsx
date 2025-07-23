@@ -31,7 +31,19 @@ export default async function RootLayout({
         <Header data={globalData.header} />
         {children}
         <Footer data={globalData.footer} />
-        <script async defer src="https://app.chatby.io/js/widget/nhxhsg85lwry0ujm/float.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      (function(w, d, s, u) {
+        w.ChatbyWidget = { key: "nhxhsg85lwry0ujm" };
+        var js = d.createElement(s);
+        js.src = u;
+        js.async = true;
+        d.head.appendChild(js);
+      })(window, document, 'script', 'https://app.chatby.io/js/widget.js');
+    `,
+          }}
+        ></script>
       </body>
     </html>
   )
