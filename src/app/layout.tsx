@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header"
 // import Banner from "@/components/layout/Banner"
 import Footer from "@/components/layout/Footer"
 import { fetchGlobalData } from "@/lib/strapi"
+import Script from "next/script"
+
 import { AOSInitializer } from "@/components/AOSInitializer"
 
 export const metadata: Metadata = {
@@ -31,19 +33,10 @@ export default async function RootLayout({
         <Header data={globalData.header} />
         {children}
         <Footer data={globalData.footer} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-      (function(w, d, s, u) {
-        w.ChatbyWidget = { key: "nhxhsg85lwry0ujm" };
-        var js = d.createElement(s);
-        js.src = u;
-        js.async = true;
-        d.head.appendChild(js);
-      })(window, document, 'script', 'https://app.chatby.io/js/widget.js');
-    `,
-          }}
-        ></script>
+        <Script
+          src="https://app.chatby.io/js/widget/nhxhsg85lwry0ujm/float.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
