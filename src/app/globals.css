@@ -149,3 +149,8 @@
     min-height: 100vh; */
   }
 }
+/* globals.css o en una devtool */
+
+html, body {
+  overflow-x: hidden;
+}

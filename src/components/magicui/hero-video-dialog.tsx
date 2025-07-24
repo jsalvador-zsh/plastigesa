@@ -128,7 +128,7 @@ export default function HeroVideoDialog({
                   src={videoSrc}
                   className="size-full rounded-2xl"
                   allowFullScreen
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share fullscreen"
                 ></iframe>
               </div>
             </motion.div>
