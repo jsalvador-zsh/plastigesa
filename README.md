@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plastigesa EIRL - Sitio Web Corporativo
 
-## Getting Started
+Este proyecto fue desarrollado para **Plastigesa EIRL**, una empresa peruana especializada en empaques flexibles y embalajes. El sitio web está construido con tecnologías modernas como **Next.js**, **TypeScript**, **Tailwind CSS**, **Strapi**, y **Framer Motion** para brindar una experiencia fluida, rápida y escalable.
 
-First, run the development server:
+Puedes visitar el sitio en [plastigesa.com](https://plastigesa.com/).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<div align="center">
+<a href="https://plastigesa.com/">
+<img src="./public/screenshot-web.png" alt="Captura de pantalla del sitio de Plastigesa">
+</a>
+<p></p>
+</div>
+
+<div align="center">
+
+## 📚 Tecnologías Utilizadas
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs\&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB.svg?logo=react\&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?logo=typescript\&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4.svg?logo=tailwindcss\&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF.svg?logo=framer\&logoColor=white)
+![Strapi](https://img.shields.io/badge/Strapi-2E2E3E.svg?logo=strapi\&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-f9ad00?logo=pnpm\&logoColor=f9ad00\&color=gray)
+
+</div>
+
+## 🚀 Características Principales
+
+* Diseño atractivo, moderno y responsive
+* Arquitectura Jamstack con consumo desde Strapi
+* Animaciones con Framer Motion
+* Carruseles interactivos con Swiper
+* Despliegue automático con Vercel
+* Integración con CMS headless para contenido dinámico
+* Optimizado para SEO y performance
+
+## 🏗 Estructura del Proyecto
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── app/                 # Rutas App Router de Next.js
+│   ├── components/          # Componentes reutilizables
+│   ├── lib/                 # Funciones de utilidad (fetch, Strapi, etc.)
+│   ├── styles/              # Estilos globales (Tailwind)
+│   └── types/               # Tipado personalizado (Strapi, etc.)
+├── next.config.js           # Configuración de Next.js
+├── tailwind.config.ts       # Configuración de Tailwind
+├── tsconfig.json            # Configuración de TypeScript
+└── package.json             # Dependencias del proyecto
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🦜 Comandos Principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Desde la raíz del proyecto:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando          | Acción                                               |
+| ---------------- | ---------------------------------------------------- |
+| `pnpm install`   | Instala todas las dependencias                       |
+| `pnpm run dev`   | Inicia el servidor de desarrollo en `localhost:3000` |
+| `pnpm run build` | Compila el sitio para producción                     |
+| `pnpm run start` | Inicia el servidor en modo producción                |
 
-## Learn More
+## 🚧 Despliegue y Actualización Automática
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este proyecto está conectado con Strapi como CMS. Se utiliza un **webhook de Vercel** para desplegar automáticamente el sitio cada vez que se actualiza el contenido desde el panel de Strapi.
