@@ -45,7 +45,7 @@ export default function HeroBlock(props: HeroBlock) {
               <InteractiveHoverButton
                 key={link.id}
                 className={cn(
-                  "rounded-md",
+                  "rounded-lg",
                   link.isButton && "shadow",
                   link.type === "primary" ? "" : "border"
                 )}>

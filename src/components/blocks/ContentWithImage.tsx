@@ -11,7 +11,7 @@ export default function ContentWithImage({
   image,
 }: Props) {
   return (
-    <section className="py-12 text-center space-y-4">
+    <section className="p-4 text-center space-y-4">
       <div
         className={`container mx-auto p-4 max-w-6xl grid md:grid-cols-2 gap-12 items-center ${reversed ? "md:flex-row-reverse" : ""}`}
       >
