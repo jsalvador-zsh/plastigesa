@@ -74,7 +74,7 @@ export default function Map() {
     <div
       ref={mapRef}
       id="map"
-      className="h-72 lg:h-[400px] w-full rounded-md shadow-md"
+      className="h-72 lg:h-[400px] w-full rounded-lg shadow-md"
     />
   )
 }

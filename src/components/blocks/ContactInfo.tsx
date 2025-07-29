@@ -22,7 +22,7 @@ const Contact2 = ({
   email = 'comercial@plastigesa.com - cotizacion@plastigesa.com',
 }: Contact2Props) => {
   return (
-    <section className="py-12" id="quotation">
+    <section className="p-4" id="quotation">
       {/* Mapa */}
       <div className="container mx-auto max-w-6xl px-4 mb-10" data-aos="zoom-in"
               data-aos-duration="1500">
