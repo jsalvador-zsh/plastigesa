@@ -180,6 +180,61 @@ export interface BlockCarousel {
   images: Images[]
 }
 
+
+export interface BlockFeaturedArticles {
+  __component: "blocks.featured-articles"
+  id: number
+  articles: Article[]
+}
+
+export interface Article {
+  id: number
+  documentId: string
+  title: string
+  description: string
+  slug: string
+  time: number
+  content: string // contenido en formato Markdown
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  locale: string
+  featuredImage: Image
+  author: Author
+  date: string
+  contentTags: ContentTag[]
+}
+
+export interface Author {
+  id: number
+  documentId: string
+  fullName: string
+  bio: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  locale: string
+  image: Image
+}
+
+export interface ContentTag {
+  id: number
+  documentId: string
+  title: string
+  description: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  locale: string
+}
+
+export interface Image {
+  id: number
+  documentId: string
+  url: string
+  alternativeText: string | null
+}
+
 export type DynamicBlock =
   | BlockHero
   | BlockSectionHeader
@@ -189,3 +244,4 @@ export type DynamicBlock =
   | BlockGridCardImage
   | BlockBentoGridCard
   | BlockCarousel
+  | BlockFeaturedArticles
