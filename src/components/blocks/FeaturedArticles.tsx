@@ -51,8 +51,7 @@ export default function FeaturedArticles({ articles }: BlockFeaturedArticles) {
               <div className="flex items-center justify-between mb-2">
                 <div className="text-xs text-muted-foreground flex items-center gap-1">
                   <Clock className="h-3 w-3" />
-                  {/* Optional: Simulación si no tienes article.time */}
-                  {Math.floor(article.content.length / 600)} min
+                  {article.time} min
                 </div>
               </div>
 

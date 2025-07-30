@@ -127,11 +127,11 @@ export default function BlogPageClient({
   }
 
   return (
-    <div className="container mx-auto max-w-6xl px-4 py-8">
+    <div className="container mx-auto max-w-6xl p-6">
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Blog</h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-base text-muted-foreground max-w-2xl mx-auto">
           Descubre artículos sobre productos plásticos industriales, agricultura y más. 
           Mantente actualizado con las últimas tendencias y consejos de la industria.
         </p>

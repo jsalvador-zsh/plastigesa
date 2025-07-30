@@ -26,7 +26,7 @@ interface BlogPageProps {
 // Loading component
 function BlogPageSkeleton() {
   return (
-    <div className="container max-w-6xl mx-auto px-4 py-8">
+    <div className="container max-w-6xl mx-auto p-6">
       <div className="text-center mb-12">
         <Skeleton className="h-12 w-64 mx-auto mb-4" />
         <Skeleton className="h-6 w-96 mx-auto" />
