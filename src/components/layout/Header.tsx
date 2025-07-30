@@ -23,7 +23,7 @@ export default function Header({ data }: { data: HeaderType }) {
 
   return (
     <header className="border-b">
-      <div className="container mx-auto p-4 max-w-6xl flex items-center justify-between">
+      <div className="container mx-auto p-6 max-w-6xl flex items-center justify-between">
         {/* Logo (izquierda) */}
         <Link href={data.logo.href} className="flex items-center space-x-2">
           {data.logo.image?.url && (

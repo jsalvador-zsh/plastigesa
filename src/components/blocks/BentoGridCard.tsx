@@ -9,7 +9,7 @@ type CardBentoGridProps = {
 export default function BentoGridCard({ cards }: { cards: BlockBentoGridCard["cards"] }) {
   return (
     <section className="pb-12">
-      <div className="container mx-auto p-4 max-w-6xl">
+      <div className="container mx-auto p-6 max-w-6xl">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-[200px]">
           {cards.map((item) => (
             <Card

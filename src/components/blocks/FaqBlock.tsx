@@ -19,7 +19,7 @@ interface FaqBlockProps {
 
 export function FaqBlock({ faqs }: FaqBlockProps) {
   return (
-    <div className="max-w-3xl mx-auto p-4">
+    <div className="max-w-3xl mx-auto p-6">
       <Accordion type="single" collapsible className="w-full" defaultValue={`item-${faqs[0]?.id}`}>
         {faqs.map((faq) => (
           <AccordionItem key={faq.id} value={`item-${faq.id}`} data-aos="fade-up"

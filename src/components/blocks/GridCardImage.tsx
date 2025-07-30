@@ -15,7 +15,7 @@ export default function GridCardImage(props: BlockGridCardImage) {
 
   return (
     <section key={id} className="p-4">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
           {cards.slice(0, 6).map((card) => (
             <Card

@@ -31,7 +31,7 @@ const Contact2 = ({
 
       {/* Contenido: Contacto + Formulario */}
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="flex flex-col gap-12 lg:flex-row">
+        <div className="grid grid-cols-1 items-center gap-12 md:flex md:flex-1/2">
           {/* Información de contacto */}
           <div className="lg:w-1/2 flex flex-col gap-8" data-aos="fade-right"
               data-aos-duration="1500">
@@ -56,7 +56,7 @@ const Contact2 = ({
           </div>
 
           {/* Formulario */}
-          <div className="lg:w-1/2 border rounded-lg p-8 shadow-sm flex flex-col gap-6" data-aos="fade-left"
+          <div className="lg:w-1/2 border rounded-lg p-6 shadow-sm flex flex-col gap-6 text-sm" data-aos="fade-left"
               data-aos-duration="1500">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="w-full">

@@ -19,7 +19,7 @@ const Footer = ({ data }: FooterProps) => {
 
     return (
         <footer className="pt-20 pb-5">
-            <div className="container mx-auto p-4 max-w-6xl space-y-4">
+            <div className="container mx-auto p-6 max-w-6xl space-y-4">
                 {/* Logo y descripción */}
                 <div className="flex flex-col lg:flex-row justify-between gap-8">
                     <div className="flex flex-col gap-4 max-w-md">

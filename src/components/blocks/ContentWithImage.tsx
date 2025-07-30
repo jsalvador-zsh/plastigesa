@@ -13,7 +13,7 @@ export default function ContentWithImage({
   return (
     <section className="p-4 text-center space-y-4">
       <div
-        className={`container mx-auto p-4 max-w-6xl grid md:grid-cols-2 gap-12 items-center ${reversed ? "md:flex-row-reverse" : ""}`}
+        className={`container mx-auto p-6 max-w-6xl grid md:grid-cols-2 gap-12 items-center ${reversed ? "md:flex-row-reverse" : ""}`}
       >
         <div className="text-center md:text-left" data-aos="fade-right"
               data-aos-duration="1500">

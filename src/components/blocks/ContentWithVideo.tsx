@@ -15,7 +15,7 @@ export default function ContentWithVideo({
   return (
     <section className="py-12 text-center space-y-4">
       <div
-        className={`container mx-auto p-4 max-w-6xl grid md:grid-cols-2 gap-12 items-center ${reversed ? "md:flex-row-reverse" : ""}`}
+        className={`container mx-auto p-6 max-w-6xl grid md:grid-cols-2 gap-12 items-center ${reversed ? "md:flex-row-reverse" : ""}`}
       >
         <div className="text-center md:text-left">
           <h3 className="text-3xl font-semibold mb-4 text-pretty">{heading}</h3>

@@ -18,7 +18,7 @@ export default function HeroBlock(props: HeroBlock) {
 
   return (
     <section className="relative w-full px-6 py-20 md:py-32 bg-background overflow-hidden">
-      <div className="container mx-auto p-4 max-w-6xl flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="container mx-auto p-6 max-w-6xl flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Left: Text */}
         <div className="w-full md:w-3/4 text-center md:text-left" data-aos="fade-left" data-aos-duration="1500">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground">

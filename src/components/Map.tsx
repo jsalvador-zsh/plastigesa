@@ -9,13 +9,9 @@ export default function Map() {
     const loadLeaflet = async () => {
       if (!mapRef.current) return
 
-      // Evita múltiples inicializaciones
       if ((window as any).L && mapRef.current.dataset.initialized) return
-
-      // Marca como inicializado
       mapRef.current.dataset.initialized = 'true'
 
-      // Cargar CSS
       const leafletCssId = 'leaflet-css'
       if (!document.getElementById(leafletCssId)) {
         const link = document.createElement('link')
@@ -25,7 +21,6 @@ export default function Map() {
         document.head.appendChild(link)
       }
 
-      // Cargar script JS
       const leafletJsId = 'leaflet-js'
       if (!document.getElementById(leafletJsId)) {
         const script = document.createElement('script')
@@ -42,7 +37,7 @@ export default function Map() {
       const L = (window as any).L
       if (!L || !mapRef.current) return
 
-      const map = L.map(mapRef.current).setView([-16.4054279, -71.5128487], 17)
+      const map = L.map(mapRef.current)
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution:
@@ -61,10 +56,21 @@ export default function Map() {
         shadowSize: [41, 41],
       })
 
-      L.marker([-16.4054279, -71.5128487], { icon })
-        .addTo(map)
-        .bindPopup('Plastigesa E.I.R.L.')
-        .openPopup()
+      // Coordenadas de ambas sucursales
+      const coords = [
+        { lat: -16.4054279, lng: -71.5128487, label: 'Plastigesa - Tda. Simón Bolivar' },
+        { lat: -16.4202853, lng: -71.5148345, label: 'Plastigesa - Tda. Pedro P. Díaz' },
+      ]
+
+      const bounds = L.latLngBounds([])
+
+      coords.forEach(({ lat, lng, label }) => {
+        const marker = L.marker([lat, lng], { icon }).addTo(map)
+        marker.bindPopup(label).openPopup()
+        bounds.extend([lat, lng])
+      })
+
+      map.fitBounds(bounds, { padding: [50, 50] })
     }
 
     loadLeaflet()

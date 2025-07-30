@@ -17,7 +17,7 @@ export function MultiRowCarouselBlock({
   speeds = [30, 30],
 }: CarouselBlockProps) {
   return (
-    <div className="max-w-7xl mx-auto px-4 space-y-8">
+    <div className="max-w-6xl mx-auto px-4 space-y-8">
       {Array.from({ length: rows }).map((_, rowIndex) => {
         const direction = directions[rowIndex % directions.length]
         const speed = speeds[rowIndex % speeds.length]
