@@ -7,6 +7,7 @@ import ContentWithImage from "@/components/blocks/ContentWithImage"
 import GridCard from "@/components/blocks/GridCard"
 import GridCardImage from "@/components/blocks/GridCardImage"
 import BentoGridCard from "@/components/blocks/BentoGridCard"
+import FeaturedArticles from "@/components/blocks/FeaturedArticles"
 import {MultiRowCarouselBlock} from "@/components/blocks/Carousel"
 import { FaqBlock } from "@/components/blocks/FaqBlock"
 
@@ -37,7 +38,8 @@ export default function DynamicZone({ blocks }: Props) {
             return <MultiRowCarouselBlock key={block.id} {...block} />
           case "blocks.faq":
             return <FaqBlock key={block.id} {...block} />
-          // Añade más bloques según vayas creando otros componentes
+          case "blocks.featured-articles":
+            return <FeaturedArticles key={block.id} {...block} />
           default:
             return null
         }
