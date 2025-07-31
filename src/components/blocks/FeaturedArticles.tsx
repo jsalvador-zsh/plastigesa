@@ -33,7 +33,8 @@ export default function FeaturedArticles({ articles }: BlockFeaturedArticles) {
 
   return (
     <section className="max-w-6xl mx-auto p-6">
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-right"
+            data-aos-duration="1500">
         {articles.map((article) => (
           <Card
             key={article.id}

@@ -1,14 +1,13 @@
 import Image from "next/image"
 import { BlockGridCardImage } from "@/types/strapi"
 import { getStrapiMedia } from "@/lib/strapi"
-import { BorderBeam } from "@/components/magicui/border-beam"
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 export default function GridCardImage(props: BlockGridCardImage) {
   const { id, cards } = props
@@ -16,26 +15,14 @@ export default function GridCardImage(props: BlockGridCardImage) {
   return (
     <section key={id} className="p-4">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-          {cards.slice(0, 6).map((card) => (
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
+          {cards.slice(0, 8).map((card) => (
             <Card
               key={card.id}
               data-aos="flip-left"
               data-aos-duration="1500"
               className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow h-full"
             >
-              <BorderBeam
-                duration={6}
-                size={400}
-                className="from-transparent via-green-600 to-transparent"
-              />
-              <BorderBeam
-                duration={6}
-                delay={3}
-                size={400}
-                borderWidth={2}
-                className="from-transparent via-primary to-transparent"
-              />
               {card.image && (
                 <div className="relative aspect-[4/3] w-full">
                   <Image
@@ -49,14 +36,14 @@ export default function GridCardImage(props: BlockGridCardImage) {
               )}
               <CardHeader className="flex flex-col">
                 {card.badge && (
-                  <span className="text-xs text-background bg-green-600 py-1 px-3 rounded-lg font-semibold uppercase tracking-wide">
+                  <Badge variant="outline" className="text-xs px-2 py-0 capitalize">
                     {card.badge}
-                  </span>
+                  </Badge>
                 )}
-                <CardTitle className="text-xl text-zinc-900">
+                <CardTitle className="text-xl font-semibold transition-colors">
                   {card.heading}
                 </CardTitle>
-                <CardDescription className="text-zinc-600 text-pretty">
+                <CardDescription className="text-muted-foreground mb-4">
                   {card.text}
                 </CardDescription>
               </CardHeader>

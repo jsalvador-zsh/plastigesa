@@ -60,27 +60,27 @@ const Contact2 = ({
               data-aos-duration="1500">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="w-full">
-                <Label htmlFor="firstname">Nombres</Label>
+                <Label htmlFor="firstname" className='mb-1'>Nombres</Label>
                 <Input type="text" id="firstname" />
               </div>
               <div className="w-full">
-                <Label htmlFor="company">Empresa</Label>
+                <Label htmlFor="company" className='mb-1'>Empresa</Label>
                 <Input type="text" id="company" />
               </div>
             </div>
 
             <div>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className='mb-1'>Email</Label>
               <Input type="email" id="email" placeholder="Email" />
             </div>
 
             <div>
-              <Label htmlFor="subject">Asunto</Label>
+              <Label htmlFor="subject" className='mb-1'>Asunto</Label>
               <Input type="text" id="subject" placeholder="Asunto" />
             </div>
 
             <div>
-              <Label htmlFor="message">Mensaje</Label>
+              <Label htmlFor="message" className='mb-1'>Mensaje</Label>
               <Textarea id="message" placeholder="Escribe tu mensaje aquí." />
             </div>
 

@@ -17,7 +17,7 @@ export default function ContentWithVideo({
       <div
         className={`container mx-auto p-6 max-w-6xl grid md:grid-cols-2 gap-12 items-center ${reversed ? "md:flex-row-reverse" : ""}`}
       >
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left" data-aos="fade-right" data-aos-duration="1500">
           <h3 className="text-3xl font-semibold mb-4 text-pretty">{heading}</h3>
           <div className="text-muted-foreground space-y-4">
             {text.map((block, index) =>
@@ -27,7 +27,8 @@ export default function ContentWithVideo({
             )}
           </div>
         </div>
-        <div className="relative">
+        <div className="relative" data-aos="fade-left"
+          data-aos-duration="1500">
           <HeroVideoDialog
             videoSrc={videoUrl}
             className="block dark:hidden"
