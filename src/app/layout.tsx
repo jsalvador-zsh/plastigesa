@@ -35,8 +35,25 @@ export default async function RootLayout({
         {children}
         <Footer data={globalData.footer} />
         <Script
-          src="https://app.chatby.io/js/widget/nhxhsg85lwry0ujm/float.js"
+          id="chatwoot"
           strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(d,t) {
+                var BASE_URL="https://plastigesa-chatwoot.rq0yds.easypanel.host";
+                var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=BASE_URL+"/packs/js/sdk.js";
+                g.async = true;
+                s.parentNode.insertBefore(g,s);
+                g.onload=function(){
+                  window.chatwootSDK.run({
+                    websiteToken: 'av7aQB5Gg1mv3Gr4zgHWa8fR',
+                    baseUrl: BASE_URL
+                  })
+                }
+              })(document,"script");
+            `
+          }}
         />
       </body>
     </html>
