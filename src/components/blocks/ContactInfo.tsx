@@ -18,7 +18,7 @@ interface Contact2Props {
 const Contact2 = ({
   title = 'Contáctanos',
   description = 'Estamos aquí para ayudarte. Solicita tu cotización personalizada y descubre cómo podemos impulsar tu negocio.',
-  phone = '+51 996964540',
+  phone = '+51 925912560',
   email = 'comercial@plastigesa.com - cotizacion@plastigesa.com',
 }: Contact2Props) => {
   return (
