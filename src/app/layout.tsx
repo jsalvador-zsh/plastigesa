@@ -39,6 +39,7 @@ export default async function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
+              window.chatwootSettings = {"position":"right","type":"expanded_bubble","launcherTitle":"Conversa con nosotros"};
               (function(d,t) {
                 var BASE_URL="https://chat.plastigesa.org";
                 var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
